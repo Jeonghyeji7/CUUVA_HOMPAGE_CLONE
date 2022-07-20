@@ -1,0 +1,103 @@
+.about-container{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0 0 0;
+}
+.about-content1{
+    background: url('/src/images/about-bg.png') center center/cover no-repeat;
+    display: flex;
+    flex: 1 1 200px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    min-width: 200px;
+    max-height: 200px;
+    /* transform: rotate(90deg); */
+}
+.about-title-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.panel{
+    padding: 0 20px;
+}
+.about-margin{
+    padding: 20px 0;
+    display: flex;
+    align-items: stretch;
+    place-content: stretch center;
+    flex: 1 1 1e-9px;
+}
+.about-content2{
+    padding: 20px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    /* ??? */
+    max-height: 700px;
+    
+}
+
+/* 스크롤 버튼 */
+.about-content2::-webkit-scrollbar-thumb{
+    border-radius: 0;
+    background-color: #fff;
+    background-image: -webkit-gradient(linear,40% 0,75% 84%,from(#666),to(#555),color-stop(.6,#777));
+}
+/* 스클롤 넓이 */
+.about-content2::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(245,245,245,.02);
+    border-radius: 0;
+  }
+  /* 스클롤 전체 */
+  .about-content2::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: rgba(245,245,245,.02);
+    border-radius: 0;
+}
+
+
+
+
+
+.about-history{
+    padding: 10px 40px;
+    
+}
+.about-history-title{
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: #18A98E;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.history-item{
+    display: flex;
+    flex-direction: row;
+}
+.history-year{
+    color: #fb8300;
+    font-weight: 700;
+    font-size: 20px;
+    flex: 1 1 120px;
+    max-width: 120px;
+    min-width: 120px;
+}
+.history-year-content{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    white-space: pre-line !important;
+    padding-bottom: 20px;
+    line-height: 24px;
+}
+.histoty-blank{
+    flex: 1 1 50px;
+    max-width: 50px;
+    min-width: 50px;
+}

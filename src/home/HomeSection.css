@@ -1,0 +1,81 @@
+.home-container {
+    background: url('/src/images/background-unsplash.jpg') center center/cover no-repeat;
+    background-color:rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    /* 내용이 종횡비를 유지하면서 요소에 정의된 너비와 높이안에서 가능한한 많이 확대(scale up)시킨다.
+    fill | contain | cover | none | scale-down https://webdir.tistory.com/486*/
+    object-fit: contain;
+     /* 다른 함목을 덮지 않도록한다 */
+    z-index: -1;
+   
+}
+.home-box{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-box-main{
+    padding: 0 20px;
+    max-width: 940px;
+    max-height: 500px;
+}
+.home-box1{
+    color: white;
+    font-size: 90px;
+    margin-top: -100px;
+    margin: 0 0 20px;
+    font-weight: 700;
+    
+}
+.home-box2 {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px;
+    
+}
+.home-box3{
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: white;
+    line-height: 25px;
+    font-weight: 400;
+}
+.home-slide{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home-slide p{
+    font-size: 19px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #55e2c0;
+    
+}
+
+@media screen and (max-width: 500px){
+    .home-box1{
+        font-size: 40px;
+        margin-top: -100px;
+        margin-bottom: 20px;
+    }
+    .home-box2 {
+        font-size: 20px;
+    }
+    .home-box3{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,42 @@
+.footer__container{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 90px;
+    min-height: 90px;
+    max-height: 90px;
+    background: #e3e3e3;
+    width: 100vw;
+}
+
+.footer__logo{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+.footer__logo img{
+    height: 40px;
+}
+.ft__content{
+    flex: 1 1 0%;
+}
+.ft__info{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch center;
+    align-items: stretch;
+    padding-right: 250px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #a0a0a0;
+    text-align: center;
+    min-width: 600px;
+
+}

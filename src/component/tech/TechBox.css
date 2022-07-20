@@ -1,0 +1,13 @@
+.pf__tech{
+    width: auto;
+    height: 30px;
+    background-color: #f4f4f4;
+    border: 1px solid #d7d7d7;
+    font-size: 15px;
+    color: #777;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-right: 5px;
+}
