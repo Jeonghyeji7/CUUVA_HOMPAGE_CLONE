@@ -1,26 +1,44 @@
+import React, { useRef } from "react";
+import { FullPage, Slide } from "react-full-page";
 import './App.css';
-import Home from './pages/Home';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Navbar from './component/nav/Navbar';
 import About from './about/About';
 import Portfolio from './portfolio/Portfolio';
 import CoreValues from './corevalues/CoreValues';
-import ContactFooter from './pages/ContactFooter';
+import ResizableModal from "./component/modal/ResizableModal";
+import { installModals, MODAL_TYPES } from "./lib/helper/modalHelper";
+import Navbar from "./component/nav/Navbar";
+import Home from "./home/Home";
+import Contact from "./contact/Contact";
 
 function App() {
+
+  const resizableModalRef = useRef();
+
+  installModals({
+    [MODAL_TYPES.RESIZABLE_MODAL]: resizableModalRef,
+  });
+
   return (
-    <>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/portfolio" element={<Portfolio />}></Route>
-        <Route path="/core-values" element={<CoreValues />}></Route>
-        <Route path="/contact-footer" element={<ContactFooter />}></Route>
-      </Routes>
-    </Router>
-    </>
+      <>
+        <FullPage controls={Navbar}>
+          <Slide>
+            <Home />
+          </Slide>
+          <Slide>
+            <About />
+          </Slide>
+          <Slide>
+            <Portfolio />
+          </Slide>
+          <Slide>
+            <CoreValues />
+          </Slide>
+          <Slide>
+            <Contact />
+          </Slide>
+        </FullPage>
+        <ResizableModal ref={resizableModalRef} />
+      </>
   );
 }
 

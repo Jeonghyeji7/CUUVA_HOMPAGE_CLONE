@@ -1,33 +1,48 @@
-import React from "react";
+import React, {useCallback, useMemo} from "react";
 import "./Portfolio.css";
-import CardCover from "../images/card/p1-1.png";
 import Tech from "../component/tech/TechBox";
-import Data from "./dataArrays";
 
 const PortfolioCard = (props) => {
-  let arr = Data[props.index];
-  console.log(arr);
+  const {
+    data,
+    onClick,
+  } = props;
+
+  const handleOnClick = useCallback(() => {
+    onClick(data);
+  }, [onClick, data]);
+
+  const {
+    title,
+    tech_l,
+    images,
+  } = data;
+
+  const coverImg = useMemo(() => {
+    if (images && images.length > 0) {
+      return images[0];
+    }
+
+    return null;
+  }, [images]);
+
   return (
-    <>
       <div className="cards__item">
         <div className="cards__item__link" to="/portfolio">
           <div className="cards__item__pic-wrap">
             <img
               className="cards__item__img"
               alt="Image"
-              src={CardCover}
-              onClick={props.onClick}
+              src={coverImg}
+              onClick={handleOnClick}
             />
           </div>
         </div>
-        <div className="card__item__title">{arr.title}</div>
-        <div className="cards__items">
-          <div className="cards__items__tech">
-            <Tech content={arr.tech_l} />
-          </div>
+        <div className="card__item__title">{title}</div>
+        <div className="cards__item__tech">
+          <Tech content={tech_l} />
         </div>
       </div>
-    </>
   );
 };
 

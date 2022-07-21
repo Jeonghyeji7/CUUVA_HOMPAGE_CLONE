@@ -1,14 +1,14 @@
 import React from "react";
 import "./CoreValues.css";
 
-function cvcards(props) {
+function CoreValuesCard(props) {
   return (
     <>
-        <div className="cvcard">
+        <div className="cv__card">
           <div className="cv__number">STEP{props.index}</div>
           <div className="cv__contents">
             <div>
-              <img className="cv__img" alt="?" src={props.src}></img>
+              <img className="cv__img" alt="?" src={props.src} />
             </div>
             <div className="cv__big">{props.big}</div>
             <div className="cv__small">{props.small}</div>
@@ -19,4 +19,4 @@ function cvcards(props) {
   );
 }
 
-export default cvcards;
+export default CoreValuesCard;

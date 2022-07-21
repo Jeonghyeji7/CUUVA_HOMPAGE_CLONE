@@ -1,0 +1,58 @@
+.flexible-modal {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  background: white;
+}
+.flexible-modal-mask {
+  position: fixed;
+  height: 100%;
+  background: rgba(55, 55, 55, 0.6);
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.flexible-modal-resizer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  margin: 5px;
+  border-bottom: solid 2px #333;
+  border-right: solid 2px #333;
+}
+.flexible-modal-drag-area{
+  background:transparent !important;
+  height: 50px;
+  position:absolute;
+  right:0;
+  top:0;
+  cursor:move;
+}
+
+.modal__header {
+  background:#18a98e !important;
+  position: absolute;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.modal__header .modal__title {
+  position: absolute;
+  font-size: 26px;
+  line-height: 50px;
+  color: #fff;
+  left: 30px;
+}
+.modal__header .modal__close_button {
+  position: absolute;
+  font-size: 42px;
+  line-height: 50px;
+  color: #fff;
+  top: 0;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+}

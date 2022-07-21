@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './ModalSlider.css'
-import { useState, useEffect } from 'react';
 
 const ModalSlider = () => {
 
@@ -22,15 +21,16 @@ const ModalSlider = () => {
         setScrollState("-"+count*100+"vw");
     }
   return (
-      <>
-    <ul className='pf__slider'>
-        <li className='mainImg' style={{
-            backgroundImage : "url('"+scrollState"')"}}></li>
-    </ul>
-    <div>
-        <button onClick={prevButton}>prev</button>
-        <button onClick={nextButton}>next</button>
-    </div>
+    <>
+      <ul className='pf__slider'>
+          <li className='mainImg' style={{
+            backgroundImage: `url('${scrollState}')`
+          }}/>
+      </ul>
+      <div>
+          <button onClick={prevButton}>prev</button>
+          <button onClick={nextButton}>next</button>
+      </div>
     </>
   )
 }

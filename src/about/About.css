@@ -1,29 +1,39 @@
 .about-container{
-    width: 100%;
-    height: 100vh;
     padding: 80px 0 0 0;
-}
-.about-content1{
-    background: url('/src/images/about-bg.png') center center/cover no-repeat;
-    display: flex;
-    flex: 1 1 200px;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
-    min-width: 200px;
-    max-height: 200px;
-    /* transform: rotate(90deg); */
 }
-.about-title-item{
+.about-title {
+    background: url('/src/images/about-bg.png') center center/cover no-repeat;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 20px 0;
+    min-width: 200px;
 }
-.panel{
+.about-title-item {
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+.about-title-item > .about-title-img {
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.about-title-item > .about-title-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.about-title-item > .about-title-label {
+    flex: 0;
+    text-align: center;
+}
+
 .about-margin{
     padding: 20px 0;
     display: flex;
@@ -33,12 +43,9 @@
 }
 .about-content2{
     padding: 20px 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 100%;
+    flex: 1;
     /* ??? */
     max-height: 700px;
-    
 }
 
 /* 스크롤 버튼 */
@@ -61,43 +68,27 @@
     border-radius: 0;
 }
 
-
-
-
-
 .about-history{
     padding: 10px 40px;
-    
-}
-.about-history-title{
-    margin-bottom: 30px;
-    font-size: 50px;
-    color: #18A98E;
-    font-family: 'Alfa Slab One', cursive;
 }
 
 .history-item{
     display: flex;
     flex-direction: row;
+    padding: 10px 0;
 }
 .history-year{
-    color: #fb8300;
-    font-weight: 700;
     font-size: 20px;
-    flex: 1 1 120px;
-    max-width: 120px;
-    min-width: 120px;
+    font-weight: 700;
+    color: #fb8300;
+    line-height: 24px;
+    flex-basis: 120px;
 }
 .history-year-content{
     font-size: 14px;
     font-weight: 400;
     color: #333;
     white-space: pre-line !important;
-    padding-bottom: 20px;
     line-height: 24px;
-}
-.histoty-blank{
-    flex: 1 1 50px;
-    max-width: 50px;
-    min-width: 50px;
+    flex: 1;
 }

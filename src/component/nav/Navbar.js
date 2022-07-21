@@ -1,54 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useCallback } from "react";
 import "./Navbar.css";
-import logimg from '../../images/logo_white.png'
+import logoImg from '../../images/logo_white.png'
 
-function Navbar() {
+function Navbar(props) {
+  const {
+    scrollToSlide,
+  } = props;
+
+  const handleScroll = useCallback((index) => () => {
+    scrollToSlide(index);
+  }, []);
 
   return (
-    <>
       <nav className="navbar">
         <div className="navbar-container">
-          {/* 로고 */}
           <div className="nav-bar-top">
-            <Link to="/" className="navbar-logo">
-              <img src={logimg} alt="no image"></img>
-            </Link>
+            <a onClick={handleScroll(0)} className="navbar-logo">
+              <img src={logoImg} alt="Cuuva Logo Image"/>
+            </a>
           </div>
 
           <div className="navbar-box">
             <ul className="nav-menu">
               <li className="nav-item">
-                <Link to="/" className="nav-links">
+                <a onClick={handleScroll(0)} className="nav-links">
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link to="/about" className="nav-links">
+                <a onClick={handleScroll(1)} className="nav-links">
                   About
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link to="/portfolio" className="nav-links">
+                <a onClick={handleScroll(2)} className="nav-links">
                   Portfolio
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link to="/core-values" className="nav-links">
+                <a onClick={handleScroll(3)} className="nav-links">
                   Core Values
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link to="/contact-footer" className="nav-links">
+                <a onClick={handleScroll(4)} className="nav-links">
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
-          
         </div>
       </nav>
-    </>
   );
 }
 
